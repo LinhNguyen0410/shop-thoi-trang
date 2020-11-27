@@ -1,0 +1,1513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yellowtail", cursive;
+    cursor: context-menu;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1535px;
+    margin: 0 auto;
+}
+
+img:hover {
+    cursor: zoom-in;
+}
+
+
+/* Phan account dau trang */
+
+.header_account {
+    display: flex;
+    width: 100%;
+    height: 8rem;
+    background-color: #000;
+    position: relative;
+}
+
+.flag_country {
+    width: 40%;
+    display: block;
+}
+
+.flag_country img {
+    width: 8rem;
+    padding-top: 2.5rem;
+    padding-left: 3rem;
+}
+
+.flag_country img {
+    cursor: pointer;
+}
+
+
+/* css va custom select */
+
+.header_account .select_country {
+    position: absolute;
+    top: 30%;
+    margin-left: 10px;
+    color: #000;
+    padding: 6px 6px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    background-color: #FFF;
+}
+
+.header_account .select_country option {
+    color: green;
+}
+
+.header_account .select_country:hover {
+    background-color: rgb(199, 220, 240);
+    cursor: pointer;
+}
+
+.header_account small {
+    color: #fff;
+    position: absolute;
+    top: 36%;
+    left: 14%;
+    font-size: 1.8rem;
+}
+
+.header_account small:hover {
+    color: red;
+}
+
+.menuAccount {
+    display: block;
+    width: 60%;
+}
+
+.menuAccount ul {
+    display: flex;
+    padding: 1rem;
+    justify-content: flex-end;
+}
+
+.menuAccount ul li {
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.menuAccount ul li a {
+    color: #fff;
+    transition: all .3s ease-out 0s
+}
+
+.menuAccount ul li a:hover {
+    color: red;
+}
+
+
+/* START HEADER */
+
+header {
+    display: flex;
+    width: 100%;
+    height: 11rem;
+}
+
+
+/* phan logo */
+
+header .logo {
+    width: 10%;
+    display: block;
+}
+
+header .logo img {
+    width: 13rem;
+    margin: 4rem;
+}
+
+
+/* phan menu */
+
+.menu {
+    width: 60%;
+}
+
+.menu ul {
+    display: flex;
+    margin-top: 3.2rem;
+    margin-left: 13rem;
+}
+
+.menu ul li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-left: 2rem;
+    background-color: rgb(139, 209, 139);
+    box-shadow: 3px 4px green;
+}
+
+.menu ul li a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+    transition: all .3s ease-out 0s
+}
+
+.menu ul li a:hover {
+    color: #fff;
+}
+
+
+/* sub menu */
+
+.menu ul li .sub_menu {
+    position: absolute;
+    display: none;
+    width: 180%;
+    top: 30%;
+    left: -100%;
+}
+
+.menu ul li .sub_menu li {
+    margin: 0.2rem;
+    border-radius: 10px;
+    border-bottom: 3px solid #000;
+    box-shadow: 2px 2px green;
+}
+
+.menu ul li .sub_menu li {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.menu ul li .sub_menu li a:hover {
+    font-weight: bold;
+}
+
+.menu ul li:hover .sub_menu {
+    display: block;
+    z-index: 1111;
+}
+
+
+/* o tim kiem */
+
+.boxSearch {
+    width: 10%;
+    margin-top: 3.3rem;
+    position: relative;
+    margin-right: 2rem;
+}
+
+.boxSearch input {
+    width: 20rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    border: 0.1px solid rgb(206, 200, 200);
+    padding: 1.4rem;
+}
+
+.boxSearch input:hover {
+    cursor: pointer;
+}
+
+.fa-search {
+    position: absolute;
+    top: 19%;
+    right: -20%;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+
+/* 2 icon */
+
+.icon {
+    display: block;
+    width: 10%;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    font-size: 1.2rem;
+}
+
+.fa-heart {
+    margin-right: 2.5rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid grey;
+    padding: 1.4rem;
+    color: #000;
+    border: 0.1px solid rgb(187, 185, 185);
+}
+
+.fa-heart:hover {
+    background-color: rgb(228, 222, 222);
+}
+
+.fa-shopping-cart {
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid grey;
+    padding: 1.4rem;
+    color: #000;
+    border: 0.1px solid rgb(187, 185, 185);
+}
+
+.fa-shopping-cart:hover {
+    background-color: rgb(228, 222, 222);
+}
+
+
+/* nut dang nhap */
+
+.btnSignIn {
+    width: 10%;
+    margin-top: 2.6rem;
+    margin-left: 1rem;
+}
+
+.btnSignIn button {
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 1.3rem;
+    width: 12rem;
+    color: #fff;
+    background: #2577fd;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(155, 186, 243) 50%, #2577fd 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+}
+
+.btnSignIn button:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    border: 1px solid blue;
+}
+
+
+/* START SLIDER */
+
+slider {
+    display: block;
+    width: 100%;
+    height: 73rem;
+    background: #c9ecfa;
+    display: flex;
+    position: absolute;
+}
+
+slider .img_girl img {
+    width: 67.5rem;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+    animation-timing-function: ease;
+    animation: Animate 7s 1;
+    position: relative;
+}
+
+slider .img_man img {
+    width: 67rem;
+    margin-left: 10rem;
+    margin-top: 15rem;
+    animation-timing-function: ease;
+    animation: Animate 7s 1;
+    position: relative;
+}
+
+slider .img_kid img {
+    width: 67rem;
+    margin-left: 2rem;
+    margin-top: 20rem;
+    animation-timing-function: ease;
+    animation: Animate 7s 1;
+    position: relative;
+}
+
+
+/* ANIMATE CÔ BÉ DI CHUYỂN TỪ BÊN TRÁI VÀO TRONG ,PHẢI SÉT CHO N POSITION LÀ RELATIVE */
+
+@keyframes Animate {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 10rem;
+    }
+}
+
+slider .img_girl img:hover {
+    cursor: context-menu;
+}
+
+.title_slider {
+    margin-top: 15rem;
+    margin-left: 10rem;
+}
+
+.title_slider span {
+    font-size: 3rem;
+    color: #2577fd;
+    font-style: italic;
+}
+
+.title_slider h3 {
+    font-size: 11rem;
+    font-family: "Playfair Display", serif;
+    line-height: 11rem;
+    color: #000;
+    /* set thời giam,đặt tên animate */
+    animation-duration: 10s;
+    animation-name: colorTitle;
+    animation-iteration-count: infinite;
+    text-shadow: 4px 4px blue;
+}
+
+
+/* ANIMATION LOANG MÀU TEXT thẻ H3 */
+
+
+/* @keyframes colorTitle {
+    from {
+        color: #000;
+    }
+    to {
+        color: rgb(252, 205, 53);
+    }
+} */
+
+
+/* loang màu text H3 */
+
+@keyframes colorTitle {
+    0% {
+        color: rgb(4, 0, 255);
+    }
+    25% {
+        color: rgb(240, 194, 68);
+    }
+    50% {
+        color: rgb(139, 209, 139);
+    }
+    100% {
+        color: rgb(255, 0, 0);
+    }
+}
+
+.title_slider p {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.title_slider button {
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 1.3rem;
+    width: 16rem;
+    background: #2577fd;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(155, 186, 243) 50%, #2577fd 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    box-shadow: 4px 4px blue;
+}
+
+.title_slider button:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    border: 1px solid blue;
+}
+
+
+/* CSS Slider thứ 2 cho n khác cái mặc định */
+
+.slider2 {
+    background-image: linear-gradient(to bottom right, #FFCC66, #FFFFCC);
+}
+
+.title_slider2 {
+    margin-top: 15rem;
+    margin-left: 10rem;
+}
+
+.title_slider2 span {
+    font-size: 3rem;
+    color: #fd2525;
+    font-style: italic;
+}
+
+.title_slider2 h3 {
+    font-size: 11rem;
+    font-family: "Playfair Display", serif;
+    line-height: 11rem;
+    color: #000;
+    /* set thời giam,đặt tên animate */
+    animation-duration: 10s;
+    animation-name: colorTitle;
+    animation-iteration-count: infinite;
+    text-shadow: 4px 4px orange;
+}
+
+.title_slider2 p {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.title_slider2 button {
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 1.3rem;
+    width: 16rem;
+    background: #2577fd;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(165, 165, 165) 50%, #000000 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    box-shadow: 4px 4px black;
+}
+
+.title_slider2 button:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+
+/* slider 3 */
+
+.slider3 {
+    background-image: linear-gradient(to bottom right, #66CC66, #99FF99);
+}
+
+.title_slider3 {
+    margin-top: 15rem;
+    margin-left: 10rem;
+}
+
+.title_slider3 span {
+    font-size: 3rem;
+    color: blueviolet;
+    font-style: italic;
+}
+
+.title_slider3 h3 {
+    font-size: 11rem;
+    font-family: "Playfair Display", serif;
+    line-height: 11rem;
+    color: #000;
+    /* set thời giam,đặt tên animate */
+    animation-duration: 10s;
+    animation-name: colorTitle;
+    animation-iteration-count: infinite;
+    text-shadow: 4px 4px green;
+}
+
+.title_slider3 p {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.title_slider3 button {
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 1.3rem;
+    width: 16rem;
+    background: #2577fd;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(255, 192, 192) 50%, red 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    box-shadow: 4px 4px red;
+}
+
+.title_slider3 button:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+
+/* slider 4 */
+
+.slider4 {
+    background-image: linear-gradient(to bottom right, #ff7eba, #FFFFCC);
+}
+
+.title_slider4 {
+    margin-top: 15rem;
+    margin-left: 1rem;
+}
+
+.title_slider4 span {
+    font-size: 3rem;
+    color: #fffb00;
+    font-style: italic;
+}
+
+.title_slider4 h3 {
+    font-size: 11rem;
+    font-family: "Playfair Display", serif;
+    line-height: 11rem;
+    color: #000;
+    /* set thời giam,đặt tên animate */
+    animation-duration: 10s;
+    animation-name: colorTitle;
+    animation-iteration-count: infinite;
+    text-shadow: 4px 4px rgb(255, 110, 207);
+}
+
+.title_slider4 p {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.title_slider4 button {
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 1.3rem;
+    width: 16rem;
+    background: #2577fd;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(165, 165, 165) 50%, #f88d8d 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    box-shadow: 4px 4px pink;
+}
+
+.title_slider4 button:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+
+/* START CATEGORY */
+
+category {
+    width: 100%;
+    height: 50rem;
+    display: block;
+    margin-top: 25rem;
+}
+
+.title_category {
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
+.product_category {
+    display: flex;
+    margin-top: 8rem;
+    justify-content: space-around;
+}
+
+.category-Owmen,
+.category-WinterCloth,
+.category-ManCloth {
+    width: 29%;
+    position: relative;
+}
+
+.category-Owmen img,
+.category-WinterCloth img,
+.category-ManCloth img {
+    max-width: 43rem;
+}
+
+.info_category,
+.info_category_winter {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+}
+
+.info_category h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.info_category span {
+    display: block;
+    font-size: 1.4rem;
+    border-radius: 40px;
+    background: #ffce25;
+    padding: 1.4rem;
+    width: 16rem;
+    text-align: center;
+}
+
+.info_category span:hover {
+    background-color: rgb(216, 197, 27);
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.info_category span a {
+    color: #000;
+}
+
+.info_category small {
+    display: block;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: #2577fd;
+    text-shadow: 0px -2.3px 0px #fff;
+    /* text-shadow: hiệu ứng chữ nổi; */
+    font-weight: 900;
+    font-style: italic;
+    margin-top: -1.3rem;
+}
+
+
+/* phần info cái hình ở giữa khác 2 hình 2 bên */
+
+.info_category_winter span {
+    display: block;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: #2577fd;
+    text-shadow: 0px -2.3px 0px #fff;
+    /* text-shadow: hiệu ứng chữ nổi; */
+    font-weight: 900;
+    font-style: italic;
+}
+
+.info_category_winter h3 {
+    font-size: 2.4rem;
+}
+
+.info_category_winter small {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+}
+
+latest-product {
+    width: 100%;
+    height: 15rem;
+    display: block;
+    margin-top: 8rem;
+}
+
+.header_latest-product {
+    display: flex;
+}
+
+.header_latest-product h3 {
+    width: 60%;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    margin-left: 20rem;
+}
+
+.header_latest-product ul {
+    width: 40%;
+    display: flex;
+    margin-top: 0.2rem;
+    font-size: 2rem;
+    margin-right: 16rem;
+}
+
+.header_latest-product ul li {
+    padding: 1.3rem;
+}
+
+.header_latest-product ul li a {
+    color: gray;
+}
+
+.header_latest-product ul li a:active {
+    color: red;
+    cursor: pointer;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background: rgb(219, 214, 214);
+}
+
+
+/* START LIST PRODUCT */
+
+list-product {
+    width: 100%;
+    display: block;
+    height: 50rem;
+}
+
+.wrap_list-product {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15rem;
+}
+
+.product img {
+    max-width: 50rem;
+    padding: 2.2rem;
+    transition: transform .2s;
+    /* Animation */
+    border-radius: 40px;
+}
+
+.product img:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.07);
+}
+
+
+/* relative cho thẻ cha để move các thẻ con */
+
+.product {
+    width: 40rem;
+    height: 60rem;
+    position: relative;
+}
+
+
+/* Tạo chữ NEW trên hình ảnh của những sp mới */
+
+.product_new {
+    border-radius: 40px;
+    font-size: 1.5rem;
+    background-color: #ff003c;
+    padding: 0.5rem;
+    width: 7rem;
+    display: block;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 6%;
+    left: 9%;
+}
+
+
+/* button view detail */
+
+.product .view-detail {
+    border-radius: 5px;
+    padding: 0.4rem;
+    font-size: 1rem;
+    background-color: #fff;
+    position: absolute;
+    right: 7%;
+    bottom: 32%;
+    border: 1px solid gray;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(153, 153, 153) 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+}
+
+.view-detail:hover {
+    background-position: left bottom;
+    cursor: pointer;
+}
+
+.fa-cart-plus {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+}
+
+.product_new:hover {
+    cursor: pointer;
+}
+
+
+/* mấy ngôi sao đánh giá */
+
+.product .ratting_product {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.ratting_product .fa-star {
+    color: #ffbc07;
+}
+
+.ratting_product .low-star {
+    color: rgb(197, 185, 185);
+}
+
+.product a {
+    display: block;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 0.8rem;
+    color: #000;
+}
+
+.product a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.price_product {
+    text-align: center;
+    margin-top: 1.7rem;
+    font-size: 1.8rem;
+}
+
+.now-price {
+    padding: 1rem;
+}
+
+.old-price {
+    color: red;
+    text-decoration-line: line-through;
+}
+
+
+/* img product hien thi sau khi an vao anh 1 san pham */
+
+#imgProduct-More {
+    width: 90rem;
+    height: 55.5rem;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(231, 232, 233));
+    display: flex;
+    border: 4px solid rgb(45, 155, 163);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: 50%;
+    display: none;
+    box-shadow: 4px 2px 2px 4px rgb(61, 136, 139)
+}
+
+#imgProduct-More .main-Img img {
+    max-width: 55rem;
+    border-radius: 10px;
+    transition: transform .2s;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    padding: 0.01rem;
+    border-right: 4px solid rgb(121, 197, 202);
+}
+
+#imgProduct-More .main-Img img:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.05);
+    border: 4px solid rgb(45, 155, 163);
+}
+
+.thumb_img .box,
+.thumb_img .box-active {
+    display: inline-block;
+}
+
+.thumb_img img:hover {
+    border: 4px solid rgb(42, 73, 94);
+}
+
+.thumb_img img {
+    max-width: 12rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    padding: 0.1rem;
+    border: 1px solid gray;
+}
+
+
+/* icon cancel */
+
+.fa-window-close {
+    font-size: 2.5rem;
+    color: rgb(42, 73, 94);
+    position: absolute;
+    right: -0.09%;
+    top: -0.1%;
+    background-color: red;
+}
+
+
+/* START BEST PRODUCT */
+
+best-product {
+    width: 100%;
+    display: block;
+    margin-top: 30rem;
+    position: relative;
+    margin-bottom: 30rem;
+}
+
+.wrapBest-Product {
+    width: 90%;
+    background-color: #fff7d8;
+    height: 58rem;
+    margin-left: 6.8rem;
+    display: flex;
+}
+
+.imgManPB {
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    z-index: 1;
+    /* z-index: lớn hơn sẽ ưu tiên nằm trênn; */
+    animation-name: imgModeManBP;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    /*   animation-iteration-count: infinite; là số lần lăp lại hiệu ứng  VO HAN */
+}
+
+
+/* ANIMATE DI CHUYÊN MẤY CÁI THẰNG NGƯỜI MẪU */
+
+@keyframes imgModeManBP {
+    0% {
+        right: 0rem;
+        bottom: 0px;
+    }
+    25% {
+        left: 11rem;
+    }
+}
+
+.wrapBest-Product .text-hiden {
+    font-size: 12rem;
+    position: absolute;
+    transform: rotate(-90deg);
+    font-family: "Poppins", sans-serif;
+    -webkit-text-stroke: 2px #e6dfc6;
+    -webkit-text-fill-color: transparent;
+    top: 55%;
+    left: 8%;
+}
+
+.infoBestProduct {
+    margin-left: 55rem;
+}
+
+.infoBestProduct h3 {
+    font-size: 6rem;
+    font-family: "Playfair Display", serif;
+    margin-top: 17rem;
+    animation-name: infoBP;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes infoBP {
+    from {
+        color: #000;
+    }
+    to {
+        color: rgb(255, 53, 2);
+    }
+}
+
+.infoBestProduct p {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: #373b41;
+    margin-top: 2rem;
+}
+
+.infoBestProduct button {
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 1.5rem;
+    width: 17rem;
+    color: #fff;
+    background: #000000;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(153, 153, 153) 50%, #000000 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+}
+
+.infoBestProduct button:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.imgShirtPolo {
+    position: absolute;
+    top: 65%;
+    left: 75%;
+    /* animation-name: imgPolo;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite; */
+    /*   animation-iteration-count: infinite; là số lần lăp lại hiệu ứng  VO HAN */
+}
+
+
+/* ANIMATE DI CHUYÊN MẤY CÁI ÁO POLO */
+
+
+/* @keyframes imgPolo {
+    0% {
+        right: 0px;
+        bottom: 0px;
+    }
+    25% {
+        right: 1rem;
+        bottom: 1rem;
+    }
+    50% {
+        left: 110rem;
+        bottom: 1rem;
+    }
+} */
+
+
+/* START BEST COLLECTION */
+
+best-collection {
+    display: block;
+    width: 100%;
+    height: 70rem;
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+.imgManBC {
+    position: absolute;
+    top: -10%;
+    left: 45%;
+    width: 30%;
+    animation-name: imgModeManBC;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    /*   animation-iteration-count: infinite; là số lần lăp lại hiệu ứng  VO HAN */
+}
+
+
+/* ANIMATE DI CHUYÊN MẤY CÁI THẰNG NGƯỜI MẪU */
+
+@keyframes imgModeManBC {
+    0% {
+        right: 0rem;
+        bottom: 0px;
+    }
+    25% {
+        left: 65rem;
+    }
+}
+
+.title-bestCollection {
+    position: absolute;
+    top: 8%;
+    left: 13%;
+    width: 30%;
+}
+
+.title-bestCollection h3 {
+    font-size: 4.5rem;
+    font-family: "Playfair Display", serif;
+}
+
+.title-bestCollection p {
+    font-size: 2rem;
+    color: rgb(168, 168, 168);
+    font-family: "Poppins", sans-serif;
+    margin-top: 2rem;
+}
+
+.title-bestCollection button {
+    margin-top: 5rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 1.3rem;
+    width: 16rem;
+    color: #fff;
+    background: #2577fd;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(155, 186, 243) 50%, #2577fd 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+}
+
+.title-bestCollection button:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    border: 1px solid blue;
+}
+
+.title-bestCollection img {
+    display: block;
+    margin-top: 14rem;
+}
+
+.item_BC {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+}
+
+.nameItemBC1 {
+    position: absolute;
+    top: 15%;
+    left: -120%;
+    font-size: 1.5rem;
+}
+
+.nameItemBC1:hover {
+    color: #Fff;
+    border: 1px solid blue;
+    padding: 2.2rem;
+    border-radius: 10px;
+    background-color: blue;
+    position: absolute;
+    top: 10%;
+    left: -140%;
+    cursor: pointer;
+}
+
+.nameItemBC2 {
+    position: absolute;
+    top: 42%;
+    left: -150%;
+    font-size: 1.5rem;
+    border: 1px solid blue;
+    padding: 2.2rem;
+    border-radius: 10px;
+    background-color: blue;
+    color: #fff;
+}
+
+.nameItemBC2:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.nameItemBC3 {
+    position: absolute;
+    top: 85%;
+    left: -160%;
+    font-size: 1.5rem;
+}
+
+.nameItemBC3:hover {
+    color: #fff;
+    border: 1px solid blue;
+    padding: 2.2rem;
+    border-radius: 10px;
+    background-color: blue;
+    position: absolute;
+    top: 80%;
+    left: -180%;
+    cursor: pointer;
+}
+
+.imgItemBc1 {
+    margin-left: 1rem;
+}
+
+.imgItemBc2 {
+    margin-left: 0.6rem;
+}
+
+.imgItemBc3 {
+    margin-left: 1.3rem;
+}
+
+
+/* START latest-offer */
+
+latest-offer {
+    width: 90%;
+    height: 35rem;
+    background-color: #ddf2ff;
+    display: flex;
+    margin-left: 7rem;
+    border-radius: 1rem;
+}
+
+.title_latest-offer {
+    width: 50%;
+    margin-left: 22rem;
+    margin-top: 9rem;
+}
+
+.title_latest-offer h3 {
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.1rem;
+}
+
+.title_latest-offer span {
+    font-size: 2.2rem;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.1rem;
+    color: rgb(104, 104, 104);
+    margin-top: 2.1rem;
+    display: block;
+}
+
+
+/* box nhập email */
+
+.Email {
+    width: 40%;
+    margin-top: 15rem;
+    position: relative;
+}
+
+.Email input {
+    width: 35rem;
+    border-radius: 40px;
+    font-size: 1.7rem;
+    padding: 2rem;
+    border: hidden;
+}
+
+.buttonEmail button {
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    padding: 2rem;
+    width: 15rem;
+    color: #fff;
+    background: #2577fd;
+    border: none;
+    /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+    background: linear-gradient(to right, rgb(155, 186, 243) 50%, #2577fd 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    position: absolute;
+    left: 50%;
+    top: -0%;
+}
+
+
+/* START SHIPPING*/
+
+shipping {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    margin-top: 10rem;
+    justify-content: space-around;
+    padding: 8rem;
+}
+
+.shippingMethod,
+.shippingFast,
+.securePayment {
+    width: 33%;
+}
+
+.shippingMethod {
+    margin-left: 18rem;
+}
+
+.shippingMethod i,
+.shippingFast i,
+.securePayment i {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    margin-left: 6rem;
+}
+
+.shippingMethod i:hover,
+.securePayment i:hover,
+.shippingFast i:hover {
+    font-size: 6rem;
+}
+
+.shippingMethod h3,
+.securePayment h3,
+.shippingFast h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.shippingMethod h3:hover,
+.securePayment h3:hover,
+.shippingFast h3:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.shippingMethod p,
+.shippingFast p,
+.securePayment p {
+    font-size: 1.5rem;
+    color: rgb(129, 128, 128);
+}
+
+
+/* START SLIDER MODEL */
+
+model {
+    width: 100%;
+    display: flex;
+    margin-left: 1rem;
+}
+
+model img {
+    max-width: 30rem;
+    margin-top: 20rem;
+}
+
+
+/* START INFO SHOP */
+
+info-shop {
+    width: 80%;
+    height: 40rem;
+    display: flex;
+    margin-top: 15rem;
+    margin-left: 15rem;
+}
+
+.quickLinks,
+.newProducts,
+.Support {
+    width: 25%;
+    margin-top: 12rem;
+}
+
+.logoInfo {
+    width: 20%;
+    margin-left: 10rem;
+    margin-top: 15rem;
+}
+
+.logoInfo img {
+    width: 10rem;
+}
+
+.logoInfo p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+    color: rgb(129, 128, 128);
+}
+
+.quickLinks {
+    margin-left: 10rem;
+}
+
+.quickLinks h4,
+.newProducts h4,
+.Support h4 {
+    font-size: 2rem;
+}
+
+.quickLinks h4:hover,
+.newProducts h4:hover,
+.Support h4:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.quickLinks ul li,
+.newProducts ul li,
+.Support ul li {
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
+}
+
+.quickLinks ul li a,
+.newProducts ul li a,
+.Support ul li a {
+    color: rgb(129, 128, 128);
+}
+
+.quickLinks ul li a:active,
+.newProducts ul li a:active,
+.Support ul li a:active {
+    color: blue;
+}
+
+
+/* START FOOTER */
+
+footer {
+    width: 100%;
+    display: flex;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.copyright {
+    width: 70%;
+    margin-left: 25rem;
+    font-size: 1.7rem;
+    margin-top: 1.3rem;
+}
+
+.sci {
+    width: 30%;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+}
+
+.fa-twitter,
+.fa-behance,
+.fa-facebook-f,
+.fa-globe {
+    padding: 1rem;
+    color: #000;
+}
+
+
+/* css slider di chuyen */
+
+.owl-carousel .owl-stage-outer {
+    height: 73rem;
+}
